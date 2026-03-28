@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TikTok Web Replica - Watch trending videos, discover creators, and explore short-form content.">
+    <meta name="keywords" content="TikTok, Short Videos, Trending, Social Media, Viral">
+    <meta name="author" content="SAMER SAEID">
+    <title>TikTok - Make Your Day</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary fixed-top bg-black">
+        <div class="container-fluid px-3 px-md-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.2647 1.83842C26.2647 1.83842 27.2415 8.71804 33.7297 10.5367V16.634C30.2974 16.634 27.2588 15.228 25.1068 13.0642V30.9818C25.1068 37.8943 19.5034 43.4976 12.591 43.4976C5.67851 43.4976 0.0751953 37.8943 0.0751953 30.9818C0.0751953 24.0694 5.67851 18.466 12.591 18.466C13.5684 18.466 14.5165 18.5786 15.4243 18.7885V25.2929C14.5362 24.9659 13.5861 24.787 12.591 24.787C9.16876 24.787 6.39563 27.5601 6.39563 30.9823C6.39563 34.4045 9.16876 37.1776 12.591 37.1776C16.0132 37.1776 18.7863 34.4045 18.7863 30.9823V1.83842H26.2647Z" fill="#FE2C55"/>
+                    <path d="M33.7297 10.5367C33.7297 10.5367 36.636 10.5367 40.5197 13.3421V7.07085C37.8016 5.51378 35.5348 3.03362 34.136 0H26.2647V1.83842C26.2647 1.83842 27.2415 8.71804 33.7297 10.5367Z" fill="#25F4EE"/>
+                </svg>
+                <span class="fs-4 fw-bold ms-2 d-none d-sm-block">TikTok</span>
+            </a>
+            
+            <div class="search-bar d-none d-md-flex mx-auto position-relative bg-dark rounded-pill">
+                <input type="text" class="form-control bg-transparent border-0 text-white shadow-none px-4 py-2" placeholder="Search">
+                <div class="search-divider bg-secondary"></div>
+                <button class="btn border-0 px-3 text-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11 2a9 9 0 1 0 5.618 16.032l4.675 4.675a1 1 0 0 0 1.414-1.414l-4.675-4.675A9 9 0 0 0 11 2zm-7 9a7 7 0 1 1 14 0 7 7 0 0 1-14 0z"/></svg>
+                </button>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-outline-light d-none d-sm-block fw-semibold px-3 py-1 border-secondary">
+                    <span class="fs-5 me-1">+</span> Upload
+                </button>
+                <button class="btn btn-danger fw-bold px-4 py-1 text-white" style="background-color: #FE2C55; border-color: #FE2C55;">Log in</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-container p-0">
+        <div class="d-flex h-100">
+            
+            <aside class="sidebar d-none d-lg-flex flex-column p-3 border-end border-secondary bg-black">
+                <div class="nav flex-column gap-2 mb-4">
+                    <a href="#" class="nav-link text-white active fw-bold fs-5 p-2 rounded hover-dark">
+                        <span class="me-2">🏠</span> For You
+                    </a>
+                    <a href="#" class="nav-link text-secondary fw-semibold fs-5 p-2 rounded hover-dark">
+                        <span class="me-2">👥</span> Following
+                    </a>
+                    <a href="#" class="nav-link text-secondary fw-semibold fs-5 p-2 rounded hover-dark">
+                        <span class="me-2">🧭</span> Explore
+                    </a>
+                    <a href="#" class="nav-link text-secondary fw-semibold fs-5 p-2 rounded hover-dark">
+                        <span class="me-2">🎥</span> LIVE
+                    </a>
+                </div>
+                <hr class="border-secondary">
+                <p class="text-secondary small fw-semibold px-2">Log in to follow creators, like videos, and view comments.</p>
+                <button class="btn btn-outline-danger w-100 py-2 fw-bold mt-2" style="color: #FE2C55; border-color: #FE2C55;">Log in</button>
+            </aside>
+
+            <main class="feed-container w-100 position-relative">
+                
+                <div class="video-section d-flex justify-content-center align-items-center">
+                    <div class="video-card position-relative bg-dark rounded-4 overflow-hidden shadow">
+                        <video class="tiktok-video" loop muted playsinline src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+                        
+                        <div class="video-info position-absolute bottom-0 start-0 p-3 w-75 z-2">
+                            <h5 class="fw-bold mb-1">@creator_one</h5>
+                            <p class="mb-1 text-light">This is an amazing sunset! 🌅 #nature #beautiful</p>
+                            <p class="small fw-semibold mb-0">🎵 Original Sound - creator_one</p>
+                        </div>
+
+                        <div class="action-buttons position-absolute bottom-0 end-0 p-3 d-flex flex-column align-items-center gap-3 z-2">
+                            <div class="profile-pic bg-secondary rounded-circle mb-2 border border-2 border-white"></div>
+                            <button class="action-btn text-white text-center">
+                                <span class="fs-3">❤️</span>
+                                <span class="d-block small">1.2M</span>
+                            </button>
+                            <button class="action-btn text-white text-center">
+                                <span class="fs-3">💬</span>
+                                <span class="d-block small">45K</span>
+                            </button>
+                            <button class="action-btn text-white text-center">
+                                <span class="fs-3">🔖</span>
+                                <span class="d-block small">12K</span>
+                            </button>
+                            <button class="action-btn text-white text-center">
+                                <span class="fs-3">↗️</span>
+                                <span class="d-block small">Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section d-flex justify-content-center align-items-center">
+                    <div class="video-card position-relative bg-dark rounded-4 overflow-hidden shadow">
+                        <video class="tiktok-video" loop muted playsinline src="https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"></video>
+                        <div class="video-info position-absolute bottom-0 start-0 p-3 w-75 z-2">
+                            <h5 class="fw-bold mb-1">@animation_studio</h5>
+                            <p class="mb-1 text-light">Behind the scenes rendering. 💻 #3d #animation</p>
+                            <p class="small fw-semibold mb-0">🎵 Lo-fi Beats - Chill</p>
+                        </div>
+                        <div class="action-buttons position-absolute bottom-0 end-0 p-3 d-flex flex-column align-items-center gap-3 z-2">
+                            <div class="profile-pic bg-secondary rounded-circle mb-2 border border-2 border-white"></div>
+                            <button class="action-btn text-white text-center"><span class="fs-3">❤️</span><span class="d-block small">890K</span></button>
+                            <button class="action-btn text-white text-center"><span class="fs-3">💬</span><span class="d-block small">12K</span></button>
+                            <button class="action-btn text-white text-center"><span class="fs-3">🔖</span><span class="d-block small">5K</span></button>
+                            <button class="action-btn text-white text-center"><span class="fs-3">↗️</span><span class="d-block small">Share</span></button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom bg-black border-top border-secondary text-center py-2 z-3" style="font-size: 13px;">
+        <span class="text-secondary">Copyright SAMER SAEID.</span>
+        <a href="https://bio.link/samer" target="_blank" class="text-white text-decoration-none ms-2 fw-semibold">
+            SAMER SAEID Made by ♥️
+        </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
